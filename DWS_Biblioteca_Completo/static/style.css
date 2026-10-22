@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --fundo: #f6f5f2;
+    --texto: #22231f;
+    --suave: #73756e;
+    --verde: #315c45;
+    --verde-claro: #e7eee8;
+    --borda: #e5e4de;
+    --branco: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.topo {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    border-bottom: 1px solid var(--borda);
+    background: rgba(255,255,255,.7);
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+    color: var(--texto);
+    font: 800 20px 'Manrope', sans-serif;
+    letter-spacing: -0.8px;
+}
+
+.marca-icone {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    background: var(--verde);
+    color: white;
+    font-size: 19px;
+}
+
+.marca-ponto { color: var(--verde); }
+.etiqueta, .sobretitulo {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.etiqueta { color: var(--suave); }
+
+.conteudo { width: min(920px, 84%); margin: 0 auto; }
+.introducao { padding: 66px 0 34px; }
+.sobretitulo { margin: 0 0 12px; color: var(--verde); }
+h1, h2, h3, p { margin-top: 0; }
+h1 {
+    margin-bottom: 17px;
+    font: 800 clamp(38px, 6vw, 58px)/1.08 'Manrope', sans-serif;
+    letter-spacing: -2.8px;
+}
+h1 span { color: var(--verde); }
+.descricao { max-width: 510px; color: var(--suave); font-size: 15px; line-height: 1.7; margin-bottom: 0; }
+
+.painel {
+    padding: 28px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(35, 40, 30, .035);
+}
+.painel-cabecalho, .acervo-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+h2 { margin-bottom: 0; font: 800 22px 'Manrope', sans-serif; letter-spacing: -.7px; }
+.numero-passo { color: #c5c8bf; font: 800 28px 'Manrope', sans-serif; }
+form { margin-top: 25px; }
+.campo { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+label { font-size: 12px; font-weight: 700; color: #55584f; }
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    outline: none;
+    color: var(--texto);
+    background: #fdfdfc;
+    font: 14px 'DM Sans', sans-serif;
+    transition: border .2s, box-shadow .2s;
+}
+input:focus { border-color: var(--verde); box-shadow: 0 0 0 3px rgba(49,92,69,.10); }
+.linha-campos { display: flex; gap: 15px; margin-top: 17px; }
+.campo-ano { max-width: 150px; }
+#botao-cadastrar {
+    margin-top: 21px;
+    width: 100%;
+    padding: 14px 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0;
+    border-radius: 9px;
+    background: var(--verde);
+    color: white;
+    font: 700 14px 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: transform .2s, background .2s;
+}
+#botao-cadastrar:hover { background: #244a35; transform: translateY(-1px); }
+#botao-cadastrar:disabled { opacity: .65; cursor: wait; transform: none; }
+.mensagem { min-height: 18px; margin: 12px 0 0; font-size: 13px; color: var(--verde); }
+.mensagem.erro { color: #b43d35; }
+
+.acervo { padding: 52px 0 70px; }
+.acervo-cabecalho { margin-bottom: 20px; }
+.contador {
+    display: inline-grid;
+    place-items: center;
+    vertical-align: 3px;
+    min-width: 25px;
+    height: 25px;
+    margin-left: 4px;
+    border-radius: 8px;
+    background: var(--verde-claro);
+    color: var(--verde);
+    font: 700 12px 'DM Sans', sans-serif;
+    letter-spacing: 0;
+}
+.botao-secundario {
+    padding: 10px 13px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    background: white;
+    color: var(--texto);
+    font: 600 12px 'DM Sans', sans-serif;
+    cursor: pointer;
+}
+.botao-secundario:hover { border-color: #a9b7aa; }
+.lista-livros { display: grid; gap: 10px; }
+.livro-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px;
+    border: 1px solid var(--borda);
+    border-radius: 13px;
+    background: rgba(255,255,255,.75);
+}
+.livro-icone {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 54px;
+    border-radius: 8px;
+    background: var(--verde-claro);
+    color: var(--verde);
+    font-size: 22px;
+}
+.livro-info { min-width: 0; flex: 1; }
+.livro-info h3 { margin: 0 0 5px; font: 700 15px 'Manrope', sans-serif; overflow-wrap: anywhere; }
+.livro-info p { margin: 0; color: var(--suave); font-size: 12px; line-height: 1.5; }
+.status {
+    white-space: nowrap;
+    padding: 6px 9px;
+    border-radius: 20px;
+    background: var(--verde-claro);
+    color: var(--verde);
+    font-size: 10px;
+    font-weight: 700;
+}
+.status.emprestado { background: #f5e9d8; color: #8b5a1d; }
+.estado-vazio {
+    padding: 38px 15px;
+    text-align: center;
+    border: 1px dashed #d5d7ce;
+    border-radius: 14px;
+    color: var(--suave);
+}
+.livro-vazio { display: block; margin-bottom: 12px; color: #aab5a9; font-size: 30px; }
+.estado-vazio h3 { margin-bottom: 7px; color: var(--texto); font: 700 15px 'Manrope', sans-serif; }
+.estado-vazio p { margin-bottom: 0; font-size: 13px; }
+.escondido { display: none; }
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 23px 8%;
+    border-top: 1px solid var(--borda);
+    color: var(--suave);
+    font-size: 11px;
+}
+
+@media (max-width: 600px) {
+    .topo { height: 70px; padding: 0 6%; }
+    .etiqueta { font-size: 8px; letter-spacing: 1px; }
+    .conteudo { width: 88%; }
+    .introducao { padding-top: 48px; }
+    .painel { padding: 20px; }
+    .linha-campos { flex-direction: column; }
+    .campo-ano { max-width: none; }
+    .acervo-cabecalho { align-items: flex-start; }
+    h2 { font-size: 19px; }
+    .botao-secundario { padding: 9px; }
+    .livro-card { align-items: flex-start; padding: 12px; gap: 10px; }
+    .livro-icone { width: 38px; height: 46px; }
+    .status { font-size: 9px; }
+    footer { flex-direction: column; padding: 20px 6%; }
+}

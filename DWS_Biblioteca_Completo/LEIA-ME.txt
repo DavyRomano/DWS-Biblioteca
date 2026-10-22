@@ -1,0 +1,51 @@
+DWS - BIBLIOTECA (FLASK + SQLITE)
+
+ESTA PASTA É A PARTE DE DWS.
+Ela foi feita para ficar na mesma pasta dos arquivos de POO:
+- conectar_biblioteca.py
+- livro_dao.py
+- main.py
+- biblioteca.db (se já existir)
+
+ESTRUTURA:
+Biblioteca/
+  app.py
+  requirements.txt
+  biblioteca.db
+  conectar_biblioteca.py
+  livro_dao.py
+  main.py
+  templates/
+    index.html
+  static/
+    style.css
+    script.js
+
+COMO USAR NO WINDOWS:
+1. Copie app.py, requirements.txt, templates/ e static/ para a pasta principal do projeto de POO.
+2. Abra o terminal do VS Code nessa pasta.
+3. Instale as dependências:
+   pip install -r requirements.txt
+4. Inicie o site e a API:
+   python app.py
+5. No navegador, abra:
+   http://127.0.0.1:5000
+
+IMPORTANTE:
+- Não abra o index.html clicando duas vezes. Entre pelo endereço acima.
+- O Flask usa o arquivo biblioteca.db que fica na mesma pasta do app.py.
+- Se o banco ainda não existir, a API cria o arquivo e a tabela livros.
+- A lista GET lê os registros reais do SQLite.
+- O formulário POST grava no SQLite e atualiza a lista sem recarregar a página.
+- CORS está ativado com CORS(app), como pede a atividade.
+- Não envie a pasta __pycache__ nem ambiente virtual para o GitHub.
+
+TESTE:
+1. Abra a página no navegador.
+2. Cadastre um título, autor e ano.
+3. Veja o livro aparecer na lista.
+4. Pare e inicie o Flask novamente: o livro continua no banco.
+
+OBSERVAÇÃO SOBRE GITHUB PAGES:
+GitHub Pages não executa Flask/Python. Para demonstrar a integração localmente, use os passos acima.
+Para deixar o projeto funcionando publicamente na internet, a API Flask precisaria ser hospedada em um serviço que execute Python.
