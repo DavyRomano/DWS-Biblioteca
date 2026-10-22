@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f4f1;
+    color: #26352c;
+}
+
+header {
+    padding: 28px 20px;
+    text-align: center;
+    background: #315b45;
+    color: white;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+section {
+    padding: 22px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0000000d;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 14px 0 6px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5ce;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button {
+    margin-top: 16px;
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 5px;
+    background: #315b45;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #244634;
+}
+
+.titulo-acervo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.titulo-acervo button {
+    margin-top: 0;
+}
+
+.livro {
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #dce4de;
+    border-radius: 6px;
+}
+
+.livro h3, .livro p {
+    margin: 4px 0;
+}
+
+#mensagem {
+    min-height: 20px;
+}
+
+@media (max-width: 650px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
